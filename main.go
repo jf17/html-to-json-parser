@@ -1,19 +1,11 @@
-package html-to-json-parser
+package htmltojsonparser
+
 // author : https://github.com/jf17
 
-import (
-
-)
-
-
 func Parse() string {
-	
-		var result string = "test"
-	
-	
-		return result
-	
-	}
-	
 
-	
+	var result string = "test"
+
+	return result
+
+}
