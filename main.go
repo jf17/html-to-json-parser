@@ -4,7 +4,7 @@ package htmltojsonparser
 
 func Parse() string {
 
-	var result string = "test"
+	var result string = "html-to-json-parser"
 
 	return result
 
