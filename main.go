@@ -9,3 +9,16 @@ func Parse() string {
 	return result
 
 }
+
+
+func ReadJSON()  {
+
+	//TODO code
+
+}
+
+func WriteJSON()  {
+
+	//TODO code
+
+}
