@@ -11,11 +11,6 @@ func Parse() string {
 }
 
 
-func ReadJSON()  {
-
-	//TODO code
-
-}
 
 func WriteJSON()  {
 
