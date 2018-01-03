@@ -25,7 +25,10 @@ func replaceMinute(s string) string {
 }
 func replaceLongMinute(s string) string {
 
-	str1 := strings.Replace(s, "<td align=\"left\" valign=\"middle\" width=\"25\" class=\"bottomborder\">", "", -1)
+	str4 := strings.Replace(s, "<td align=\"left\" ", "", -1)
+	str3 := strings.Replace(str4, "align=\"middle\" ", "", -1)
+	str2 := strings.Replace(str3, "width=\"25\" ", "", -1)
+	str1 := strings.Replace(str2, "lass=\"bottomborder\">", "", -1)
 
 	str := strings.Replace(str1, "<span class=\"minute\">", "minute=", -1)
 
