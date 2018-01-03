@@ -11,7 +11,7 @@ func replaceHour(s string) string {
 
 	str := strings.Replace(s, "<span class=\"hour\">", "hour=", -1)
 
-	result := strings.Replace(s, "</span></td>", "", -1)
+	result := strings.Replace(str, "</span></td>", "", -1)
 
 	return result
 }
@@ -19,7 +19,7 @@ func replaceMinute(s string) string {
 
 	str := strings.Replace(s, "<span class=\"minute\">", "minute=", -1)
 
-	result := strings.Replace(s, "</span><br>", "", -1)
+	result := strings.Replace(str, "</span><br>", "", -1)
 
 	return result
 }
@@ -27,7 +27,7 @@ func replaceLongMinute(s string) string {
 
 	str := strings.Replace(s, "<td align=\"left\" valign=\"middle\" width=\"25\" class=\"\"><span class=\"minute\">", "minute=", -1)
 
-	result := strings.Replace(s, "</span><br>", "", -1)
+	result := strings.Replace(str, "</span><br>", "", -1)
 
 	return result
 }
