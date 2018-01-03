@@ -25,16 +25,11 @@ func replaceMinute(s string) string {
 }
 func replaceLongMinute(s string) string {
 
-	str4 := strings.Replace(s, "<td align=\"left\" ", "", -1)
-	str3 := strings.Replace(str4, "align=\"middle\" ", "", -1)
-	str2 := strings.Replace(str3, "width=\"25\" ", "", -1)
-	str1 := strings.Replace(str2, "class=\"", "", -1)
+	result := strings.Replace(s, "</span><br>", "", -1)
 
-	str := strings.Replace(str1, "<span class=\"minute\">", "minute=", -1)
+	slice := result[len(result)-2:]
 
-	result := strings.Replace(str, "</span><br>", "", -1)
-
-	return result
+	return slice
 }
 
 func keepLines(s string, n int) string {
