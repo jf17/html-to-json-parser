@@ -29,7 +29,9 @@ func replaceLongMinute(s string) string {
 
 	slice := result[len(result)-2:]
 
-	return slice
+	result1 := "minute=" + slice
+
+	return result1
 }
 
 func keepLines(s string, n int) string {
