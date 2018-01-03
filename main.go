@@ -2,6 +2,7 @@ package htmltojsonparser
 
 // author : https://github.com/jf17
 import (
+	"bytes"
 	"net/http"
 )
 import "io/ioutil"
