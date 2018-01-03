@@ -95,7 +95,7 @@ func Parse(url string) string {
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 
-	result = fromWindows1252(keepLines(string(body), 40))
+	result = fromWindows1252(keepLines(string(body), 162))
 
 	return result
 
