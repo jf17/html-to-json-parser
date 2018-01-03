@@ -23,7 +23,7 @@ func keepLines(s string, n int) string {
 
 	}
 
-	return strings.Join(strslice)
+	return strings.Join(strslice, "")
 }
 
 func Parse(url string) string {
