@@ -44,11 +44,10 @@ func keepLines(s string, n int) string {
 	for _, num := range strArray {
 		if strings.Contains(num, "<span class=\"hour\">") {
 			strslice = append(strslice, replaceHour(num))
-		} else if strings.Contains(num, "<span class=\"minute\">") {
-			strslice = append(strslice, replaceMinute(num))
 		} else if strings.Contains(num, "<td align=\"left\" valign=\"middle\" width=") {
 			strslice = append(strslice, replaceLongMinute(num))
-
+		} else if strings.Contains(num, "<span class=\"minute\">") {
+			strslice = append(strslice, replaceMinute(num))
 		}
 
 	}
