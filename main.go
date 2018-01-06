@@ -38,7 +38,9 @@ func createSlice(strIN string) []bus_schedule {
 
 	var busResult []bus_schedule = []bus_schedule{{0, 0}}
 
-	for _, num := range strIN {
+	strArray := strings.Split(strIN, "\n")
+
+	for _, num := range strArray {
 		if strings.Contains(num, "minute=\">") {
 			break
 		} else if strings.Contains(num, "hour") {
