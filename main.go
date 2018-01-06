@@ -98,7 +98,7 @@ func keepLines(s string, n int) string {
 	return strings.Join(strslice, "\n")
 }
 
-func Parse(url string) string {
+func Parse(url string) []bus_schedule {
 
 	var result string = "html-to-json-parser"
 
@@ -111,7 +111,8 @@ func Parse(url string) string {
 
 	result = keepLines(string(body), 162)
 
-	return result
+	bus := createSlice(result)
+	return bus
 
 }
 
