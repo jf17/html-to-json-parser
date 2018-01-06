@@ -44,9 +44,9 @@ func createSlice(strIN string) []bus_schedule {
 		if strings.Contains(num, "minute=\">") {
 			break
 		} else if strings.Contains(num, "hour") {
-			temphour = strings.Replace(str, "hour=", "", -1)
+			temphour = strings.Replace(num, "hour=", "", -1)
 		} else if strings.Contains(num, "minute") {
-			tempminute = strings.Replace(str, "minute=", "", -1)
+			tempminute = strings.Replace(num, "minute=", "", -1)
 			busResult = append(busResult, buildStruct(temphour, tempminute))
 		}
 
