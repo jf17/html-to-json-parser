@@ -52,6 +52,8 @@ func createSlice(strIN string) []bus_schedule {
 
 	}
 
+	return busResult
+
 }
 
 func replaceMinute(s string) string {
