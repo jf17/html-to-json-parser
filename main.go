@@ -42,7 +42,7 @@ func createSlice(strIN string) []bus_schedule {
 
 	for _, num := range strArray {
 		if strings.Contains(num, "minute=\">") {
-			break
+			continue
 		} else if strings.Contains(num, "hour") {
 			temphour = strings.Replace(num, "hour=", "", -1)
 		} else if strings.Contains(num, "minute") {
