@@ -31,6 +31,27 @@ func buildStruct(hourIN string, minuteIN string) bus_schedule {
 
 }
 
+func createSlice(strIN string) []bus_schedule {
+
+	var temphour string
+	var tempminute string
+
+	var busResult []bus_schedule = []bus_schedule{{0, 0}}
+
+	for _, num := range strArray {
+		if strings.Contains(num, "minute=\">") {
+			break
+		} else if strings.Contains(num, "hour") {
+			temphour = num[len(num)-2:]
+		} else if strings.Contains(num, "minute") {
+			tempminute = num[len(num)-2:]
+			busResult = append(strslice, buildStruct(temphour, tempminute))
+		}
+
+	}
+
+}
+
 func replaceMinute(s string) string {
 
 	str := strings.Replace(s, "<span class=\"minute\">", "minute=", -1)
