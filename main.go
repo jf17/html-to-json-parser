@@ -6,6 +6,11 @@ import (
 )
 import "io/ioutil"
 import "strings"
+import "strconv"
+
+type bus_schedule struct {
+	Hour, Minute int
+}
 
 func replaceHour(s string) string {
 
@@ -15,6 +20,17 @@ func replaceHour(s string) string {
 
 	return result
 }
+
+func buildStruct(hourIN string, minuteIN string) bus_schedule {
+
+	min, _ := strconv.Atoi(minuteIN)
+
+	hour, _ := strconv.Atoi(hourIN)
+
+	return bus_schedule{hour, min}
+
+}
+
 func replaceMinute(s string) string {
 
 	str := strings.Replace(s, "<span class=\"minute\">", "minute=", -1)
