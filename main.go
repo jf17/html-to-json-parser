@@ -75,10 +75,10 @@ func replaceLongMinute(s string) string {
 	return result1
 }
 
-func keepLines(s string, n int) string {
+func keepLines(s string) string {
 	var strslice []string
 
-	result := strings.Join(strings.Split(s, "\n")[:n], "\n")
+	result := strings.Join(strings.Split(s, "\n"), "\n")
 
 	str := strings.Replace(result, "\r", "", -1)
 
@@ -109,7 +109,7 @@ func Parse(url string) []bus_schedule {
 	defer resp.Body.Close()
 	body, err := ioutil.ReadAll(resp.Body)
 
-	result = keepLines(string(body), 162)
+	result = keepLines(string(body))
 
 	bus := createSlice(result)
 	return bus
